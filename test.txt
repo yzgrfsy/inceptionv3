@@ -1,0 +1,10 @@
+using GPU:
+python train.py --model=vgg16 --data_dir=/full/path/to/your/sorted/data
+using CPU:
+CUDA_VISIBLE_DEVICES=" " python train.py --model=vgg16 --data_dir=/home/dengta/chenxingli/keras-transfer-learning-for-oxford102/sorted
+
+inference:
+using GPU:
+python predict.py --path "/full/path/to/image" --model=vgg16
+using CPU:
+ CUDA_VISIBLE_DEVICES=" " python predict.py --path="/home/dengta/chenxingli/keras-transfer-learning-for-oxford102/sorted/test/Abyssinian/Abyssinian_70.jpg" --model=vgg16
